@@ -1,0 +1,10 @@
+.idea
+*.DS_Store
+/vendor
+/coverage
+composer.lock
+.subsplit
+.php_cs.cache
+.phpunit.result.cache
+.php-cs-fixer.cache
+cghooks.lock
