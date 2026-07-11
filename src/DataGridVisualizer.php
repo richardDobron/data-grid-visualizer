@@ -60,8 +60,11 @@ class DataGridVisualizer
         $gap = $this->config->getGap();
         $w = $matrix->getColumns();
         $h = $matrix->getRows();
+        $margin = ($gap - $size) / 2;
 
-        $args = ["viewBox" => "0 0 " . ($w * $gap) . " " . ($h * $gap)];
+        $args = [
+            "viewBox" => (-$margin) . " " . (-$margin) . " " . ($h * $gap) . " " . ($w * $gap),
+        ];
         $svg = '';
 
         for ($y = 0; $y < $h; $y++) {
@@ -72,7 +75,6 @@ class DataGridVisualizer
                 $attributes = [
                     'width' => $size,
                     'height' => $size,
-                    'x' => $h - $y,
                     'y' => $x * $gap,
                     'rx' => $radius,
                     'ry' => $radius,

@@ -57,7 +57,7 @@ class FeatureTest extends TestCase
             ],
         ]);
 
-        $this->assertEquals($gridVisualizer, '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0"></svg>');
+        $this->assertEquals($gridVisualizer, '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.5 -1.5 0 0"></svg>');
     }
 
     public function testCustomOptions(): void

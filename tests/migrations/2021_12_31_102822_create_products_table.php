@@ -13,7 +13,7 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->year('visible');
+            $table->boolean('visible');
             $table->timestamps();
         });
     }
